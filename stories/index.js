@@ -1,12 +1,18 @@
-import MovieHeader from '../src/components/headerMovie'
-import MovieDetails from "../src/components/movieDetails";
-import MovieList from "../src/components/movieList";
-import MoviesHeader from "../src/components/headerMovieList";
-import FilterControls from "../src/components/filterControls";
-import MovieCard from "../src/components/movieCard";
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import MovieCard from "../src/components/movieCard";
+import FilterControls from "../src/components/filterControls";
+import MoviesHeader from "../src/components/headerMovieList";
+import MovieList from "../src/components/movieList";
+import MovieDetails from "../src/components/movieDetails";
+import MovieHeader from '../src/components/headerMovie'
+
+
+
+
+
+
 
 const sample = {
   adult: false,

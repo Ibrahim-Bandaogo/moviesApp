@@ -89,7 +89,7 @@ const movies = [sample, sample, sample, sample, sample];
 const App = () => {
   return (
     <div className="jumbotron">
-      <HomePage movies={movies} />
+      <HomePage movies={sample} />
     </div>
   );
 };
