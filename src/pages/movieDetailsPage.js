@@ -44,6 +44,6 @@ const MoviePage = props => {
     )}
   </>
   );
-    };
+};
 
   export default withRouter(MoviePage);
