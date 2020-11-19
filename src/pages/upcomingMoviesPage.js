@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StubAPI from "../api/stubAPI";
+import { getUpcomingMovies } from "../api/tmdb-api";
 import PageTemplate from "../components/templateMovieListPage";
 
-const UpcomingMoviesPage = props => {
+
+const UpcomingMoviesPage = () => {
   const toDo = () => true;
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    getUpcomingMovies().then(movies => {
+      setMovies(movies);
+    });
+  }, []);
 
   return (
     <PageTemplate
-      movies={StubAPI.getAll()}
+      movies={ movies }
       title={"Upcoming Movies"}
       buttonHandler={toDo}
     />
