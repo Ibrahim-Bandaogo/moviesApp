@@ -6,7 +6,7 @@ import MoviePage from './pages/movieDetailsPage'
 
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom"    // CHANGED
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
-
+import UpcomingMoviesPage from './pages/upcomingMoviesPage' 
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 
@@ -18,6 +18,7 @@ const App = () => {
           <div className="container-fluid">  
         <Switch>
           <Route path="/reviews/:id" component={MovieReviewPage} />
+          <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
           <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
