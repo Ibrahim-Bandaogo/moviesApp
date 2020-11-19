@@ -31,6 +31,7 @@ const MoviesContextProvider = (props) => {
 
   const addReview = (movie, review) => {
      // Completed in next section
+       
   };
   useEffect(() => {
     getMovies().then((movies) => {
