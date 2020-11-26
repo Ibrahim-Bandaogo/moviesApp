@@ -31,9 +31,7 @@ const MovieCard = ({movie, action}) => {
             <span> {movie.vote_average}</span>
           </p>
         </div>
-        <div className="card-footer">
-           {action(movie)}
-        </div>
+        
       </div>
     </div>
   );
