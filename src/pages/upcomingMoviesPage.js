@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getUpcomingMovies } from "../api/tmdb-api";
-import AddToFavoriteButton from "../components/buttons/addToFavorites";
+import AddToWatchlistButton from "../components/buttons/addToWatchlist";
 import PageTemplate from "../components/templateMovieListPage";
+
 
 
 
@@ -20,7 +21,7 @@ const UpcomingMoviesPage = () => {
       movies={ movies }
       title="Upcoming Movies"
       action={(movie) =>{
-        return <AddToFavoriteButton movie={movies} /> 
+        return <AddToWatchlistButton movie={movies} /> 
       }}
     />
   );
