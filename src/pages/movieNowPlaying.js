@@ -3,15 +3,15 @@ import AddToWatchlistButton from "../components/buttons/addToWatchlist";
 import PageTemplate from "../components/templateMovieListPage";
 import {MoviesContext} from '../contexts/moviesContext'
 
-const UpcomingMoviesPage = () => {
+const MovieNowPlaying = () => {
   const context = useContext(MoviesContext);
-  const movies = context.upcoming.filter((m) =>{
+  const movies = context.nowPlaying.filter((m) =>{
     return !("watchlist" in m);
   });
   return (
     <PageTemplate
-      movies={ movies }
-      title="Upcoming Movies"
+      movies={movies }
+      title="Movie Now Playing"
       action={(movie) =>{
         return <AddToWatchlistButton movie={movie} /> 
       }}
@@ -19,4 +19,4 @@ const UpcomingMoviesPage = () => {
   );
 };
 
-export default UpcomingMoviesPage;
+export default MovieNowPlaying;
